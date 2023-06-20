@@ -38,40 +38,6 @@ class FrontController extends Controller
         $user = Auth::user();
         //конец вставки
 
-        //НОВАЯ ВСТАВКА ПРО ЗВЕЗДОЧКИ РЕЙТИНГА НИЖЕ:
-
-        // foreach ($mechanics as $mechanic) {
-        //     $v = (array)json_decode($mechanic->rating, 1);
-        //     $count = count($v);
-
-        //     if ($count) {
-        //         $mechanic->result = round(array_sum($v)/$count);
-        //     } else {
-        //         $mechanic->rating = 'no rating';
-        //     }
-        //     // return $mechanics;
-        // }
-
-        // function displayRatingStars($kart) {
-        //     $stars = str_repeat("&#9733;", $kart); // HTML код желтой звездочки - &#9733;
-        //     return $stars;
-        // }
-
-        // $mechanic->stars = displayRatingStars($mechanic->result);
-
-        // function displayRatingStars($kart) {
-        //     $stars = str_repeat("&#9733;", $kart); // HTML код желтой звездочки - &#9733;
-        //     return $stars;
-        // }
-
-        // // $mechanic->$stars = displayRatingStars($mechanic->result);
-        // $mechanic->stars = displayRatingStars(4);
-
-        
-
-
-        //КОНЕЦ ВСТАВКИ
-
         $services = Service::all()->sortBy('title');
 
         return view('front.home', [
